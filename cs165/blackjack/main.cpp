@@ -1,48 +1,4 @@
 
-/*
- # 1- projects re evaluated
- 
- I would like week 1's project re evaluated
- 
- The gevaluation is not avalibe on black board or at least mind is not i recieved a 50 or 100 so I am assuming I did assignmnet 1 and not assignmnet 2
- 
- I am asssuming i didnt compplete # 12
- 
-  deals with loops , input output , condidtions , logic debugging 
-
- project componenets 1, 2, 4, 5, 6, 9, 10, 11
- 
- 
-1,2,4,5,6,9,10,11 can all be seen 
- 
- gameplay () in the main.cpp
- 
- 
- I would like week 3's project re evaluated
- 
- the project involvded
- 
- Argument Passing (second pass, same material),
- Review of functions,
- Intro to recursion
- 
- they can all be found in 
- ]
- dealersturn() which is in main .cpp
-
- I would like week 4 project re evaluated
- 
- I only got a 25 out of 100 on this weeks assignmnet so I would basically like the entire thing to be revaluated. Week 4  for mainly about pointers, arrays and 2D arrys
- 
- project componenets 17, 22, 24
- 
-
- 17= infopic() which is the main .cpp
- 22=  deck::deck() which is in cards.cpp
- 24 = deck::deck () which is in cards .cpp 
- 
- */
-
 //
 //  main.cpp
 //  blackjack
