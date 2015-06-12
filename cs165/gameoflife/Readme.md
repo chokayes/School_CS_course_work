@@ -16,3 +16,5 @@ you will be prompted to entry the amonnt of lives you wish to strart with
 thoes lives with be randomly placed on the field of play
 If you can some how fill the entire bored with *'s you will have beat the game
 
+live demo: 
+http://web.engr.oregonstate.edu/~payneal/cs165/gameOfLife.mov

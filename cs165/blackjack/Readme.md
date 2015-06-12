@@ -14,3 +14,7 @@ The best possible blackjack hand is an opening deal of an ace with any ten-point
 Instructions: 
 
 Player will recieve 2 cards and then will be informed one of the dealer cards. Player one will  be able to hit (get another card) or stand try to get 21 or as close to 21 as possible without going over, Then it is the dealers turn
+
+
+demo: 
+http://web.engr.oregonstate.edu/~payneal/cs165/blackJackgameplay.mov
