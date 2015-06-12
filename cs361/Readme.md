@@ -1,7 +1,9 @@
-#Oregon State University Course work
+##CS 361  Software Engineering I
+Winter 2015
 
-Cs 165 - Accelerated Intro to Computer Science (C++) 
+employer statis -  group was to make a job app, my portion involved using some api that gave individuals information about varrious positions within various companies. 
 
-Cs 261 - 
 
-Cs 494 -  
+test - unit test 
+
+        
