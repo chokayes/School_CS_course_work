@@ -1,5 +1,7 @@
 # Oregon State University Course work
 
+ENTER FOLDER TO VIEW VIDEO AND CODE
+
 ## Cs 165 - Accelerated Intro to Computer Science (C++) 
 
 blackjack - final project in 165 demonstrating everything that was learned in course
