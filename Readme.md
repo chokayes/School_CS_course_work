@@ -32,4 +32,5 @@ Final Project- make a fully cloud backed mobile application
 
 ## Cs 419 - Software Projects (python, mysql) 
 
-
+CLI UI for Database Access 
+see https://github.com/payneal/cursePyDB
