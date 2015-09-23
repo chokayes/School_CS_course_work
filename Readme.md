@@ -22,9 +22,9 @@ Final - Combo of CS 261 (Data Structures) and CS 494 (Web Development). html , c
 
 ## CS 496 - Mobile and Cloud Software development (python, google app engine, jquery Mobile, ember.js, php) 
 
-Assignment 2: A Review of Dynamic Pages - make a dynamic webpage that can store, edit and display data
+Dynamic Pages - make a dynamic webpage that can store, edit and display data
 
-Assignment 3: Part 2 - implement a web based API to manipulate the data in your non-relational database you planned in part 1
+Web based API- create api to manipulate the data in your non-relational database
 
 How-To-Guid: write a how –to guide for a library, tool or concept
 
