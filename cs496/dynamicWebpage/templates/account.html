@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Account </title>
+  <meta charset= 'utf-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script>
+			//want to do something with radio buttion
+
+
+	</script>
+
+</head>
+<body class= "container">
+	{% if userinfo %}
+
+	<div class="page-header">
+		<h1> Welcome {{userinfo['name']}}! </h1>
+		<p> Total Gains = ${{userinfo['currentTotal'] - userinfo['startTotal']  }} </p>
+		<p> Cash Avalible = ${{userinfo['currentTotal']}} </p>
+	</div>
+
+	{% endif %}
+	<form method="post" action='/logout' >
+		<br>
+		<input class="btn btn-primary" type="submit" value="Logout">
+	</form>
+
+  <h1> Holdings </h1>
+  <table class="table table-bordered table-hover">
+    <tr>
+      <th>Sym</th>
+      <th>Description</th>
+      <th>Qty</th>
+      <th>Cost Basis</th>
+      <th>Avg/Start Price</th>
+      <th>Current Price</th>
+      <th>Day Change(%)</th>
+      <th>Daily G/L</th>
+      <th>Total G/L</th>
+      <th>Market Value</th>
+    </tr>
+		<tbody class = table-striped>
+	  	{% if info|length > 0 %}
+	    {% for x in info %}
+	    <tr>
+	      <th> {{ x['name'] }} </th>
+	      <th> {{ x['description'] }} </th>
+	      <th> {{ x['amount'] }} </th>
+	      <th> ${{  x['start'] *  x['amount'] }} </th>
+	      <th> ${{ x['start']}} </th>
+	      <th> ${{ x['current']}} </th>
+	      <th> N/A no api yet </th>
+	      <th> N/A no api yet </th>
+	      <th>${{  x['current']*x['amount'] - x['start']*x['amount'] }} </th>
+	      <th> ${{  x['current'] * x['amount'] }} </th>
+	    </tr>
+	    {% endfor %}
+	    {% endif %}
+		</tbody>
+  </table>
+  <br>
+	<h1> Trade </h1>
+	{% if message %}
+	<section>
+		<h6>Transaction</h6>
+		<p> {{ message }} </p>
+	</section>
+{% endif %}
+<br>
+	<form role="form" action='/trade' method="post">
+			<table style="width:100%">
+				<tr>
+					<th>Action</th>
+					<th>Shares</th>
+					<th>Symbol</th>
+					<th>Description</th>
+					<th>Price</th>
+				</tr>
+				<tr>
+					<th>
+						<input id="wantsToBuy" type="radio" name="move" value="bought" required>BUY
+						<br>
+						<input id="wantsToSell" type="radio" name="move" value="sold" required>SELL
+					</th>
+					<th>
+							<input type="number" name="quantity" required min= 1>
+					</th>
+					<th> <input type="text" name="symbol" required> </th>
+					<th> <input type="text" name="description" required> </th>
+						<th> <input type="text" name="price" required> </th>
+				</tr>
+			</table>
+	<br>
+	<input class="btn btn-primary" type="submit" value="SUBMIT ACTION">
+	</form>
+{% if info|length > 0 %}
+<section>
+    <h3>Updat stock Price</h3>
+      <p> Update the price of the stock  </p>
+      <p> * this will be backend api but for now its here  </p>
+      <form role="form" action='/update'>
+        <input type="number" step="00.01" min= 0 name ="updateprice">
+        <select name= "updatekey">
+        {% for x in info %}
+          <option value= {{x['key']}}> {{x['name']}}: {{ x['description'] }}</option>
+        {% endfor %}
+
+        <input class="btn btn-primary" type="submit" value="Update A STOCK">
+      </form>
+</section>
+<section>
+    <h3>Quick sell</h3>
+      <p> sell all shares of one stock with one button </p>
+      <p> * implimented for checkbox ex. </p>
+
+      <form  role="form" action='/quick' >
+        {% for x in info %}
+        <input type="checkbox" multiple="true"  name= "quicksellkey" value= {{ x['key'] }} > {{x['name']}}
+        <input type='hidden' multiple= "true" name= "quickstockname" value= {{ x['name'] }}>
+        <input type = 'hidden' multiple='true' name="quickstockdesc" value= {{x['description']}}>
+        <br>
+        {% endfor %}
+        <input class="btn btn-primary" type="submit" value="Quick Sell">
+      </form>
+      {% if  displayquick %}
+      <p> {{ displayquick }} </p>
+      {% endif %}
+</section>
+{% endif %}
+</body>
+</html>

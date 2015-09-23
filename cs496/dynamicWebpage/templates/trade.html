@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang=“en”>
+	<head>
+		<meta charset= ‘utf-8’>
+		<title>Trade</title>
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 5px;
+      }
+  </style>
+	</head>
+	<body>
+    <h1> Trade </h1>
+    <form action='/account'>
+      <input type="submit" value="RETURN TO MY ACCOUNT">
+  </form>
+
+  <br>
+    <form action='/trade' method="post">
+
+        <table style="width:100%">
+          <tr>
+            <th>Action</th>
+            <th>Shares</th>
+            <th>Symbol</th>
+            <th>Description</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <th>
+              <input type="radio" name="move" value="bought" required>BUY
+              <br>
+              <input type="radio" name="move" value="sold" required>SELL
+            </th>
+            <th>
+                <input type="number" name="quantity" required min= 1>
+            </th>
+            <th> <input type="text" name="symbol" required> </th>
+            <th> <input type="text" name="description" required> </th>
+              <th> <input type="text" name="price" required> </th>
+          </tr>
+        </table>
+    <br>
+    <input type="submit" value="SUBMIT ACTION">
+    </form>
+    {% if message %}
+	  <section>
+		    <h3>Transaction</h3>
+		      <h4> {{ message }} </h4>
+          <h6> {{ notice }} </h6>
+	</section>
+	{% endif %}
+	<body>
+</html>

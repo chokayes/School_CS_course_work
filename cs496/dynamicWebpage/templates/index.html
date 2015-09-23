@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang=“en”>
+	<head>
+		<title>Papaer Trading at its best</title>
+		<meta charset= ‘utf-8’>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+ 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+ 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('#returnsignin').hide(); //Initially returning user signin form wil be hidden.
+				$('#newsignin').hide(); //Initially new user user signin form wil be hidden.
+
+				$("#newuser").click(function(){
+					$("#newsignin").show();
+					$("#returnsignin").hide();
+					});
+
+				$("#olduser").click(function(){
+					$("#returnsignin").show();
+					$("#newsignin").hide();
+					});
+				});
+		</script>
+
+	</head>
+	<body class= "container">
+			<div class="jumbotron">
+				<div class="page-header">
+    			<h1>The Paper Trade</h1>
+				</div>
+    		<p>
+      		Paper trading (sometimes also called "virtual stock trading")
+      		is a simulated trading process in which would-be investors can
+      		'practice' investing without committing real money.
+    		</p>
+				<a class="btn btn-primary btn-lg" id="newuser" role="button">New User</a>
+				<a class="btn btn-primary btn-lg" id="olduser"  role="button">Existing User</a>
+					{% if error %}
+					<br>
+					<br>
+						{{ error }}
+					{% endif %}
+
+			</div>
+
+			<!--older user sign in-->
+		<form method="post" class="form-inline" action='/login' id="returnsignin">
+			<h2>Existing User</h2>
+			<p> Grading  username: admin, password:admin </p>
+
+			<div class="form-group">
+				<label for="text">Email:</label>
+				<input type="text" class="form-control" name="email" placeholder="Enter email" required>
+
+		 		<label for="text">Password:</label>
+	 			<input type="password" class="form-control" name="password" placeholder="Enter password" required>
+				<input type="hidden" name='neworolduser' value="old">
+				<input type="submit" class="btn btn-primary" value="Signin">
+			</div>
+		</form>
+
+		<!--new user sign in-->
+		<form method="post" class="form-inline" action='/login' id="newsignin">
+			<h3>Create User</h3>
+			<div class="form-group">
+				<label for="text">Username:</label>
+		 		<input type="text" class="form-control" name="username" placeholder="Enter username" required>
+				<label for="text">Email:</label>
+		 		<input type="text" class="form-control" name="email" placeholder="Enter email" required>
+		 		<label for="text">Password:</label>
+	 			<input type="password" class="form-control" name="password" placeholder="Enter password" required>
+				<input type="hidden" name='neworolduser' value="new">
+
+			</div>
+			<h4>Pick a Brokerage</h4>
+			<p>
+				A brokerage firm, or simply brokerage, is a financial institution that facilitates
+				the buying and selling of financial securities between a buyer and a seller. Brokerage
+				firms serve a clientele of investors who trade public stocks and other securities, usually
+				 through the firm's agent stockbrokers.
+			</p>
+  				<select class="form-control" name="broker" required >
+						<option disabled value="none">--Select--</option>
+							<option  value="T">TradeKing - No Min Balance and $4.95 Per trade </option>
+    				<option  value="S">Scottrade - Min Ballence $2,500 and $7.00 Per trade </option>
+    				<option  value="E">Etrade - Min Balance $500 and $9.99 Per trade</option>
+						<option  value="A">Ameritrade - Min Balance $500 and $9.99 Per trade</option>
+						<option value="U">USAA - No Min Balance and $8.95 Per trade</option>
+						<option value="O">Optionshouse - No Min Balance and $4.95 Per trade</option>
+					</select>
+				<h4>Total Cash</h4>
+				<p>Amount of money you wish to open your account with</P>
+				<label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+    		<div class="input-group">
+      		<div class="input-group-addon">$</div>
+      		<input type="text" class="form-control" name="cash" placeholder="Amount" required>
+      		<div class="input-group-addon">.00</div>
+    		</div>
+				<br>
+				<br>
+					<input type="submit" class="btn btn-primary" value="Sign Up">
+		</form>
+
+<br>
+    <!--<a href= '/account'> CLICK ME TO START</a>-->
+	<body>
+</html>
