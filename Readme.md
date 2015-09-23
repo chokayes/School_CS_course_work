@@ -2,6 +2,10 @@
 
 ## Cs 165 - Accelerated Intro to Computer Science (C++) 
 
+blackjack - final project in 165 demonstrating everything that was learned in course
+
+game of life - my version on conways game of life
+
 ## Cs 361 - Software Engineering I (php) 
 
 ## Cs 494 - Web Development (php, mysql, html, css, jQuery/JavaScript)
