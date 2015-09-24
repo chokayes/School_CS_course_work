@@ -14,6 +14,9 @@ Web based API- create api to manipulate the data in your non-relational database
 
 How-To-Guid: write a how –to guide for a library, tool or concept
 
+ [Check it out](http://web.engr.oregonstate.edu/~payneal/cs496/howto/#/)
+
+
 Final Project- make a fully cloud backed mobile application
 
 [![cs496 mobile app with cloud backend - swing trading mobile app](http://img.youtube.com/vi/gJw2-ufxqk4/0.jpg)](http://www.youtube.com/watch?v=gJw2-ufxqk4)
