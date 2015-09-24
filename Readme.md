@@ -34,3 +34,4 @@ Final Project- make a fully cloud backed mobile application
 
 CLI UI for Database Access 
 see https://github.com/payneal/cursePyDB
+(folder contains my portion)
