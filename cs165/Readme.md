@@ -10,5 +10,4 @@ CLICK ON IMG TO GO TO VIDEO
 
 ## game of life - my version on conways game of life
 
-[![CS165 - My version of Conway's Game of Life](http://img.youtube.com/vi/GJrolBsROj8/0.jpg)](http://www.youtube.com/watch?v=GJrolBsROj8)
- 
+[![CS165 - My version of Conway's Game of Life](http://img.youtube.com/vi/ZJyajMsDYlA/0.jpg)](http://www.youtube.com/watch?v=ZJyajMsDYlA)
