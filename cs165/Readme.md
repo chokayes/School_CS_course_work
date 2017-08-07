@@ -5,7 +5,7 @@ CLICK ON IMG TO GO TO VIDEO
 
 ## blackjack - final project in 165 demonstrating everything that was learned in course
 
-[![CS165 Finial - Black Jack Game Play](http://img.youtube.com/vi/Vdnh-YrjjFk/0.jpg)](http://www.youtube.com/watch?v=Vdnh-YrjjFk)
+[![CS165 Finial - Black Jack Game Play](http://img.youtube.com/vi/HMkXYlO8ou0/0.jpg)](http://www.youtube.com/watch?v=HMkXYlO8ou0)
 
 
 ## game of life - my version on conways game of life
